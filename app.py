@@ -5,10 +5,6 @@ import spacy
 
 app = Flask(__name__)
 
-# ✅ Health Check Route
-@app.route("/", methods=["GET"])
-def health():
-    return jsonify({"status": "OK"})
 
 # 🧠 Load NLP models once
 summarizer = pipeline("summarization", model="t5-small")
